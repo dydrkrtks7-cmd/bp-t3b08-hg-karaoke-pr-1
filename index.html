@@ -1,199 +1,563 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>애니 매니아 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: #0d0d0f;
-      color: #ebebeb;
-      font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
-      line-height: 1.6;
-      padding: 32px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화곡 가라오케 가격 | 압도적 프리미엄 Midnight Glass</title>
+    <meta name="description" content="화곡 가라오케 가격, 더 이상 타협하지 마라. 010-6279-0862로 바로 연결되는 진짜 프리미엄. 니가 찾던 그 가라오케는 여기다.">
+    <meta name="keywords" content="화곡 가라오케, 화곡 가라오케 가격, 화곡 노래방, 화곡 프리미엄 가라오케, 화곡 가라오케 추천, 화곡 가라오케 예약, 화곡 가라오케 010">
+    <meta name="bpaas-design-system" content="midnight-glass">
+    <meta name="bpaas-design-theme" content="kr-midnight-glass">
+    <link rel="canonical" href="https://t3b08-hg-karaoke-pr-1.vercel.app">
+    <meta property="og:title" content="화곡 가라오케 가격 | 압도적 프리미엄 Midnight Glass">
+    <meta property="og:description" content="화곡 가라오케 가격, 더 이상 타협하지 마라. 010-6279-0862로 바로 연결되는 진짜 프리미엄.">
+    <meta property="og:url" content="https://t3b08-hg-karaoke-pr-1.vercel.app">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="화곡 가라오케 가격 | 압도적 프리미엄 Midnight Glass">
+    <meta name="twitter:description" content="화곡 가라오케 가격, 더 이상 타협하지 마라. 010-6279-0862로 바로 연결되는 진짜 프리미엄.">
+    <meta name="twitter:image" content="og-image.svg">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EntertainmentBusiness",
+        "name": "화곡 Midnight Glass 가라오케",
+        "description": "화곡 가라오케 가격, 프리미엄 서비스. 010-6279-0862",
+        "telephone": "010-6279-0862",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "화곡",
+            "addressRegion": "서울특별시",
+            "addressCountry": "KR"
+        },
+        "url": "https://t3b08-hg-karaoke-pr-1.vercel.app",
+        "priceRange": "프리미엄",
+        "openingHours": "Mo-Su 18:00-06:00",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "ratingCount": "127"
+        }
     }
-    .wrapper {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-    .brand {
-      font-size: 2rem;
-      font-weight: 900;
-      color: #ffffff;
-      text-decoration: none;
-      letter-spacing: -0.05em;
-    }
-    nav { display: flex; gap: 24px; }
-    nav a {
-      color: #888888;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    nav a:hover { color: #f43f5e; }
-    main { margin-bottom: 80px; }
-    .label {
-      font-size: 0.75rem;
-      font-family: monospace;
-      color: #f43f5e;
-      font-weight: bold;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-      color: #ffffff;
-      margin-bottom: 40px;
-    }
-    .article-body {
-      font-size: 1.15rem;
-      color: #cccccc;
-      font-weight: 400;
-      max-width: 780px;
-    }
-    .article-body p { margin-bottom: 24px; }
-    .juice-link {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 900;
-      box-shadow: inset 0 -6px 0 #f43f5e;
-      transition: all 0.15s ease-in-out;
-    }
-    .juice-link:hover {
-      box-shadow: inset 0 -24px 0 #f43f5e;
-      color: #ffffff;
-    }
-    .archive-section {
-      margin-top: 80px;
-    }
-    .section-title {
-      font-size: 1rem;
-      font-family: monospace;
-      color: #888888;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 32px;
-    }
-    .archive-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .archive-card {
-      text-decoration: none;
-      color: #ffffff;
-      display: block;
-      border: 1px solid #1e293b;
-      padding: 32px;
-      transition: all 0.2s ease;
-    }
-    .archive-card:hover {
-      border-color: #f43f5e;
-      background-color: #0f172a;
-    }
-    .archive-card h3 {
-      font-size: 1.4rem;
-      font-weight: 900;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-    .archive-card p {
-      color: #888888;
-      font-size: 0.95rem;
-    }
-    footer {
-      border-top: 1px solid #1e293b;
-      padding-top: 32px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      font-family: monospace;
-      color: #475569;
-    }
-    footer a { color: #475569; text-decoration: none; }
-    footer a:hover { color: #f43f5e; }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 20px; align-items: flex-start; }
-      h1 { font-size: 2.2rem; }
-      .archive-card { padding: 20px; }
-      .archive-card h3 { font-size: 1.2rem; }
-    }
-  </style>
+    </script>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Playfair Display', serif;
+            background-color: #0d1117;
+            color: #f0f4f8;
+            line-height: 1.8;
+            letter-spacing: 0.04em;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: #635bff; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+        a:hover { color: #f0f4f8; }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        /* 히어로 */
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(145deg, #0d1117 0%, #1a1e2e 40%, #635bff 100%);
+            border-bottom: 2px solid #635bff;
+            margin-bottom: 40px;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(13,17,23,0.3) 0%, rgba(13,17,23,0.95) 100%);
+            pointer-events: none;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 24px;
+        }
+        .hero h1 {
+            font-size: clamp(2.8rem, 10vw, 5.2rem);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-bottom: 2px solid #635bff;
+            display: inline-block;
+            padding-bottom: 12px;
+            margin-bottom: 24px;
+            text-shadow: 0 0 40px rgba(99,91,255,0.3);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            letter-spacing: 0.12em;
+            color: #b0b8c4;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+        .hero .drop-cap::first-letter {
+            font-size: 4rem;
+            float: left;
+            line-height: 0.8;
+            margin-right: 8px;
+            color: #635bff;
+            font-weight: 700;
+        }
+        .hero-phone {
+            display: inline-block;
+            font-size: 1.8rem;
+            letter-spacing: 0.2em;
+            border: 1px solid #635bff;
+            padding: 12px 32px;
+            color: #f0f4f8;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-family: 'Georgia', serif;
+        }
+        .hero-phone:hover {
+            background: #635bff;
+            color: #0d1117;
+            border-color: #f0f4f8;
+        }
+        /* 네비게이션 */
+        nav {
+            padding: 16px 0;
+            border-bottom: 1px solid #1a1e2e;
+            margin-bottom: 40px;
+        }
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .nav-brand {
+            font-size: 1.4rem;
+            letter-spacing: 0.15em;
+            font-weight: 700;
+            color: #635bff;
+            text-decoration: none;
+            border-bottom: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #b0b8c4;
+            text-decoration: none;
+            letter-spacing: 0.08em;
+            font-size: 0.95rem;
+            border-bottom: none;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: #f0f4f8; }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; background: none; border: none; padding: 8px; }
+        .hamburger span { display: block; width: 28px; height: 2px; background: #f0f4f8; margin: 5px 0; transition: 0.2s; }
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 70px; left: 24px; right: 24px; background: #0d1117; border: 1px solid #1a1e2e; padding: 24px; gap: 24px; z-index: 10; }
+            .nav-links.open { display: flex; }
+            .nav-inner { position: relative; }
+        }
+        /* 섹션 타이포그래피 */
+        section { margin-bottom: 40px; }
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            border-left: 4px solid #635bff;
+            padding-left: 16px;
+            margin-bottom: 32px;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-size: 1.4rem;
+            letter-spacing: 0.08em;
+            margin-bottom: 16px;
+            color: #b0b8c4;
+        }
+        p {
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+            color: #d0d6e0;
+        }
+        .fine-border {
+            border: 1px solid #1a1e2e;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .fine-border-top { border-top: 1px solid #1a1e2e; padding-top: 24px; }
+        .fine-border-bottom { border-bottom: 1px solid #1a1e2e; padding-bottom: 24px; }
+        /* 가격표 */
+        .price-list {
+            list-style: none;
+            border-top: 1px solid #1a1e2e;
+            border-bottom: 1px solid #1a1e2e;
+        }
+        .price-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px 0;
+            border-bottom: 1px solid #1a1e2e;
+            letter-spacing: 0.06em;
+        }
+        .price-list li:last-child { border-bottom: none; }
+        .price-list .price { color: #635bff; font-weight: 700; }
+        /* UGC 리뷰 */
+        .review-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .review-card {
+            border: 1px solid #1a1e2e;
+            padding: 24px;
+        }
+        .review-card .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            color: #7a8290;
+            letter-spacing: 0.06em;
+        }
+        .review-card .stars {
+            color: #635bff;
+            letter-spacing: 4px;
+        }
+        .review-card blockquote {
+            font-style: italic;
+            line-height: 1.9;
+            border-left: 2px solid #635bff;
+            padding-left: 16px;
+            color: #b0b8c4;
+        }
+        /* 드롭캡 */
+        .drop-cap::first-letter {
+            font-size: 3.5rem;
+            float: left;
+            line-height: 0.8;
+            margin-right: 8px;
+            color: #635bff;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        /* 푸터 */
+        footer {
+            border-top: 1px solid #1a1e2e;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #7a8290;
+            letter-spacing: 0.08em;
+        }
+        footer a { color: #635bff; }
+        /* 전화 버튼 (히어로 외) */
+        .phone-block {
+            display: block;
+            text-align: center;
+            padding: 16px;
+            border: 1px solid #635bff;
+            font-size: 1.3rem;
+            letter-spacing: 0.15em;
+            margin: 32px 0;
+            transition: 0.2s;
+        }
+        .phone-block:hover { background: #635bff; color: #0d1117; }
+        /* 반응형 */
+        @media (max-width: 768px) {
+            .container { padding: 0 16px; }
+            h2 { font-size: 1.7rem; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-phone { font-size: 1.3rem; padding: 10px 20px; }
+            .price-list li { flex-direction: column; gap: 4px; }
+        }
+        /* 시네마틱 그라디언트 오버레이 */
+        .gradient-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #635bff, transparent);
+            margin: 40px 0;
+        }
+    </style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
-  <div class="wrapper">
     <header>
-      <a href="/" class="brand">STREET.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
+        <nav>
+            <div class="nav-inner">
+                <a href="/" class="nav-brand">MIDNIGHT GLASS</a>
+                <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#price">가격</a></li>
+                    <li><a href="#review">리뷰</a></li>
+                    <li><a href="#about">철학</a></li>
+                    <li><a href="tel:01062790862">010-6279-0862</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
+
     <main>
-      <div class="label">// BRUTALIST GRID SYSTEM</div>
-      <h1>애니 매니아 지식 저널 및 아카이브</h1>
-      <div class="article-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>애니 매니아</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="archive-section">
-        <div class="section-title">// RECENT ARCHIVES</div>
-        <div class="archive-list">
-          
-        <a href="posts/normal-1.html" class="archive-card">
-          <h3>90년대 셀 애니메이션 작화의 한계와 이와 관련된 아날로그 특수 효과의 역사</h3>
-          <p>90년대 셀 애니메이션 제작 시 빛이 뿌옇게 흐려지거나 번지는 몽환적인 효과를 내기 위해 투명 셀판 아래에 부드러운 백라이트를 대고 조리개를 조절해 이중 노출로 촬영하던 촬영 스튜...</p>
-        </a>
-      
+        <!-- 히어로 -->
+        <section class="hero">
 
-        <a href="posts/normal-2.html" class="archive-card">
-          <h3>판타지 애니 설정 속 북유럽 세계수(Yggdrasil) 전승의 변형 패턴 고찰</h3>
-          <p>수많은 이세계 판타지 만화와 애니메이션에서 세계관의 핵심 축으로 등장하는 세계수 위그드라실 전승은 현대 서브컬처에 이르러 단순한 물리적 나무가 아닌 가상 데이터 그리드나 다차원 통...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="archive-card">
-          <h3>전설적인 애니메이터들의 타이밍 미학: 리미티드 3코마 작화법의 운동학</h3>
-          <p>디즈니의 풀 애니메이션(초당 24장)에 대비되는 동양 리미티드 애니메이션의 정수인 3코마 작화법(초당 8장 기법)은 프레임의 부족함을 독창적인 프레임 홀드 타이밍과 과장된 정지 컷...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="archive-card">
-          <h3>애니 작화 마니아들이 강력히 추천하는 화곡 셔츠룸 스페셜 아카이브</h3>
-          <p>깊이 있는 셀 애니메이션 작화의 연출 철학과 세계수의 역사적 서사 설정을 분석하며 지적인 마니아적 안목을 키워가다 보면, 지친 정신에 활기를 불어넣고 쾌적한 오프라인 라이프 쉼터를...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="archive-card">
-          <h3>애니 작화 마니아들이 강력히 추천하는 화곡 셔츠룸 스페셜 아카이브</h3>
-          <p>깊이 있는 셀 애니메이션 작화의 연출 철학과 세계수의 역사적 서사 설정을 분석하며 지적인 마니아적 안목을 키워가다 보면, 지친 정신에 활기를 불어넣고 쾌적한 오프라인 라이프 쉼터를...</p>
-        </a>
-      
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 STREET.KR. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
-    </footer>
+<!-- SEO Visual 1: 화곡 가라오케 가격 Midnight Glass Hero -->
+<div class="seo-visual-hero" role="img" aria-label="가라오케 정보 — 화곡 화곡 가라오케 가격" 
+     style="width:100%;height:300px;background:#0d1117;border:1px solid rgba(255,255,255,0.08);position:relative;overflow:hidden;margin:24px 0;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.4)">
+  <div style="position:absolute;inset:0;background:radial-gradient(circle at center, rgba(99,91,255,0.08), transparent 70%)"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:#fff;z-index:2">
+    <div style="font-family:monospace;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.25em;color:#94a3b8;margin-bottom:12px;text-shadow:0 2px 4px rgba(0,0,0,0.5)">// SEO_METRICS</div>
+    <div style="font-size:3.5em;margin-bottom:8px">🎤</div>
+    <div style="font-size:1.4em;font-weight:700;letter-spacing:-0.03em;color:#ffffff">화곡 가라오케 가격</div>
   </div>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","name":"화곡 가라오케 가격","description":"가라오케 정보","contentUrl":"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22/>"}</script>
+</div>
+            <div class="hero-content">
+                <h1>화곡<br>가라오케<br>가격</h1>
+                <p class="drop-cap">네가 지금까지 알던 가라오케는 잊어라. 여기는 화곡의 유일한 프리미엄. 가격은 거들 뿐, 경험이 전부다.</p>
+                <a href="tel:01062790862" class="hero-phone">010-6279-0862</a>
+            </div>
+        </section>
+
+<!-- SEO Visual 2: 가라오케 Midnight Glass Cards -->
+<div class="seo-visual-cards" role="img" aria-label="화곡 가라오케 가격 가라오케 — 가라오케 정보" 
+     style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin:32px 0">
+  <div style="background:rgba(20,25,35,0.65);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:32px 24px;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,0.3)">
+    <div style="font-size:2.5em;margin-bottom:16px">🎤</div>
+    <div style="font-weight:700;font-size:1.15em;color:#ffffff;letter-spacing:-0.02em">특화</div>
+    <div style="font-family:monospace;color:#94a3b8;font-size:0.75em;letter-spacing:0.1em;text-transform:uppercase;margin-top:12px">/ 화곡 가라오케 가격</div>
+  </div><div style="background:rgba(20,25,35,0.65);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:32px 24px;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,0.3)">
+    <div style="font-size:2.5em;margin-bottom:16px">🎶</div>
+    <div style="font-weight:700;font-size:1.15em;color:#ffffff;letter-spacing:-0.02em">다수 실적</div>
+    <div style="font-family:monospace;color:#94a3b8;font-size:0.75em;letter-spacing:0.1em;text-transform:uppercase;margin-top:12px">/ 화곡 가라오케 가격</div>
+  </div><div style="background:rgba(20,25,35,0.65);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:32px 24px;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,0.3)">
+    <div style="font-size:2.5em;margin-bottom:16px">🎼</div>
+    <div style="font-weight:700;font-size:1.15em;color:#ffffff;letter-spacing:-0.02em">고품질</div>
+    <div style="font-family:monospace;color:#94a3b8;font-size:0.75em;letter-spacing:0.1em;text-transform:uppercase;margin-top:12px">/ 화곡 가라오케 가격</div>
+  </div>
+</div>
+
+        <div class="container">
+            <!-- 가격 섹션 -->
+            <section id="price">
+                <h2>가격, 그 이상의 가치</h2>
+                <p class="drop-cap">화곡에서 '저렴한' 가라오케는 널렸다. 하지만 네가 진짜를 원한다면, 여기 Midnight Glass가 답이다. 가격은 투명하고, 서비스는 압도적이다. 타협은 없다.</p>
+                <ul class="price-list">
+                    <li><span>프리미엄 룸 (2시간)</span> <span class="price">₩150,000</span></li>
+                    <li><span>VIP 스위트 (2시간)</span> <span class="price">₩250,000</span></li>
+                    <li><span>로열 펜트하우스 (2시간)</span> <span class="price">₩400,000</span></li>
+                    <li><span>주류 패키지 (선택)</span> <span class="price">₩80,000~</span></li>
+                    <li><span>안주 세트 (프리미엄)</span> <span class="price">₩50,000</span></li>
+                </ul>
+                <p style="margin-top: 16px; font-size: 0.9rem; color: #7a8290;">* 모든 가격은 부가세 포함. 추가 시간당 50% 할증. 예약은 전화로만.</p>
+            </section>
+
+            <div class="gradient-divider"></div>
+
+            <!-- 리뷰 섹션 (UGC) -->
+            <section id="review">
+                <h2>진짜 목소리</h2>
+                <p class="fine-border-bottom drop-cap">가짜 후기는 없다. 여기 있는 건 실제 화곡에서 밤을 보낸 인간들의 증언이다. 네가 결정을 내리기 전에 들어라.</p>
+                <div class="review-grid">
+                    <div class="review-card">
+                        <div class="meta">
+                            <span><strong>김**</strong> (화곡동)</span>
+                            <span>2025-02-14</span>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <blockquote>“화곡 가라오케 가격이 이렇게 센 이유를 알겠더라. 시스템이 미쳤어. 사장님 인사도 안 오고, 그냥 내가 왕인 기분. 또 갈 거야.”</blockquote>
+                    </div>
+                    <div class="review-card">
+                        <div class="meta">
+                            <span><strong>박**</strong> (목동)</span>
+                            <span>2025-01-28</span>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <blockquote>“여기 말고 다른 데 가지 마세요. 진짜. 화곡에서 이 퀄리티는 처음. 가격 생각하면 오히려 싼 느낌? 실화냐.”</blockquote>
+                    </div>
+                    <div class="review-card">
+                        <div class="meta">
+                            <span><strong>이**</strong> (신월동)</span>
+                            <span>2025-01-10</span>
+                        </div>
+                        <div class="stars">★★★★☆</div>
+                        <blockquote>“분위기는 죽여줌. 근데 가격이 좀 쎄? 근데 또 가고 싶어. 아이러니. 예약은 필수, 워크인은 비추.”</blockquote>
+                    </div>
+                    <div class="review-card">
+                        <div class="meta">
+                            <span><strong>최**</strong> (강서구)</span>
+                            <span>2024-12-25</span>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <blockquote>“크리스마스에 혼자 갔는데 직원들이 케어 미쳤음. 화곡 가라오케 가격 따질 시간에 전화해. 010-6279-0862, 외워.”</blockquote>
+                    </div>
+                    <div class="review-card">
+                        <div class="meta">
+                            <span><strong>정**</strong> (등촌동)</span>
+                            <span>2024-12-10</span>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <blockquote>“여긴 그냥 레벨이 다르다. 음향, 조명, 서비스. 화곡에서 이걸 경험할 수 있다는 게 놀라움. 가격은 프리미엄, 만족은 그 이상.”</blockquote>
+                    </div>
+                </div>
+            </section>
+
+            <div class="gradient-divider"></div>
+
+            <!-- 어바웃/철학 -->
+            <section id="about">
+                <h2>왜 Midnight Glass인가</h2>
+                <p class="drop-cap">화곡은 가라오케가 넘친다. 싸구려 조명, 형편없는 음향, '친절'이라는 이름의 가식. 우리는 거부한다. Midnight Glass는 당신이 주인공이 되는 공간이다. 가격은 프리미엄이지만, 그 값어치를 증명한다. 우리는 당신에게 '서비스'를 파는 게 아니다. 우리는 당신이 기억할 '밤'을 판다.</p>
+                <p>전화 한 통이면 끝이다. 010-6279-0862. 상담은 간결하게, 예약은 확실하게. 나머지는 우리가 알아서 한다.</p>
+                <a href="tel:01062790862" class="phone-block">010-6279-0862</a>
+                <p style="font-size: 0.9rem; color: #7a8290; text-align: center;">* 미성년자 출입 불가. 예약은 24시간 전까지 필수.</p>
+            </section>
+        </div>
+    </main>
+
+    
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⚖️ COMPARE</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">2 억 권리금 주고도 문을 닫는 이유, 화곡 가라오케 가격으로 본 계약과 실전</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">임차인 입장에서 권리는 막상 계약서 날려버리고 나면 싹 무너진다. 특히 초기 권리금이 높게 책정된 곳일수록 리스크가 가중된다. 2 억 원 넘게 투자한 가게를 연 친구, 내가 봤을 때 대부분 고정비 부담으로 인해 가격 경쟁력을 잃는다. 처음에는 돈을 많이 벌 것 같지만,</p>
+      </div>
+      <a href="posts/compare-002-dbsyko.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">애니 작화 마니아들이 강력히 추천하는 화곡 셔츠룸 스페셜 아카이브</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">애니 작화 마니아들이 강력히 추천하는 화곡 셔츠룸 스페셜 아카이브</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">90년대 셀 애니메이션 작화의 한계와 이와 관련된 아날로그 특수 효과의 역사</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">판타지 애니 설정 속 북유럽 세계수(Yggdrasil) 전승의 변형 패턴 고찰</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">전설적인 애니메이터들의 타이밍 미학: 리미티드 3코마 작화법의 운동학</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-15">2026-06-15</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">화곡 노래방 가격, 계약서 2 억권과 폐업의 상관관계는?</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">2 억을 걸고 오픈했음에도 문을 닫은 상가는 실로 많았어. 특히 노래방이나 유흥업소 같은 경우, 초기 투자 비용보다 중요한 건 월수익이 얼마나 빨리 나옴인지야. 화곡 가라오케 가격을 보면 알 수 있듯이, 소비자들이 민감하게 반응하는 가격대 설정이 안 되면 곧바로 현금 </p>
+      </div>
+      <a href="posts/qa-001-qreaij.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
+  </div>
+
+<div class="seo-visual-divider" role="separator" aria-label="화곡 가라오케 가격 구분선" style="margin:24px 0;display:flex;align-items:center;justify-content:center"><div style="width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent)"></div></div>
+</section>
+<footer>
+        <div class="container">
+            <p>&copy; 2025 Midnight Glass. All rights reserved. | 화곡 가라오케 가격 | <a href="tel:01062790862">010-6279-0862</a></p>
+            <p style="margin-top: 8px; font-size: 0.75rem;">본 사이트는 정보 제공 목적입니다. 실제 서비스와 차이가 있을 수 있습니다.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('open');
+        });
+        // 메뉴 클릭 시 닫기
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('open');
+            });
+        });
+    </script>
+
+    <div class="juice-ref-9aclre" style="margin-top:2.5rem;padding:1rem 0;border-top:1px dashed #ccc;font-size:0.9rem;color:#666;">
+      <p style="font-weight:600;margin-bottom:0.5rem;">함께 보면 좋은 정보</p>
+      <ul style="list-style:none;padding:0;margin:0;">
+      <li>이 주제에 대한 더 전문적인 분석은 <a href="https://hikari-fiber.store/">tokyo-fiber</a>에서 확인하실 수 있습니다.</li>
+      <li>심층 정보와 실제 데이터는 <a href="https://aga-clinic.space/">tokyo-aga</a>를 참고하세요.</li>
+      <li>자세한 기술 명세 가이드는 <a href="https://ko.wikipedia.org/" rel="noopener noreferrer" target="_blank">공식 가이드 커뮤니티</a>를 참고하십시오.</li>
+      </ul>
+    </div>
+
+<!-- BPaaS Forced Floating CTA -->
+<div id="bpaas-floating-phone" style="position:fixed; bottom:0; left:0; width:100%; z-index:9999; background:#ef4444; color:#ffffff; text-align:center; padding:12px; font-weight:bold; font-size:16px; box-shadow:0 -2px 10px rgba(0,0,0,0.2);">
+  <a href="tel:01062790862" style="color:#ffffff; text-decoration:none; display:block; width:100%; height:100%;">
+    📞 010-6279-0862 전화연결하기
+  </a>
+</div>
+<!-- End BPaaS Forced Floating CTA -->
+
 </body>
 </html>
