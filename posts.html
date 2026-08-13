@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · t3b08-hg-karaoke-pr-1</title>
+  <meta name="description" content="t3b08-hg-karaoke-pr-1에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://hwagok-song-tip.namanavi.com/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+ html { font-size: 16px; scroll-behavior: smooth; }
+ body {
+ font-family: 'Georgia', 'Times New Roman', 'Playfair Display', serif;
+ background-color: #0d1117;
+ color: #f0f4f8;
+ line-height: 1.8;
+ letter-spacing: 0.04em;
+ -webkit-font-smoothing: antialiased;
+ }
+ a { color: #635bff; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+ a:hover { color: #f0f4f8; }
+ .container {
+ max-width: 720px;
+ margin: 0 auto;
+ padding: 0 24px;
+ }
+ /* 히어로 */
+ .hero {
+ position: relative;
+ min-height: 85vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ background: linear-gradient(145deg, #0d1117 0%, #1a1e2e 40%, #635bff 100%);
+ border-bottom: 2px solid #635bff;
+ margin-bottom: 40px;
+ }
+ .hero::after {
+ content: '';
+ position: absolute;
+ inset: 0;
+ background: linear-gradient(to bottom, rgba(13,17,23,0.3) 0%, rgba(13,17,23,0.95) 100%);
+ pointer-events: none;
+ }
+ .hero-content {
+ position: relative;
+ z-index: 2;
+ padding: 24px;
+ }
+ .hero h1 {
+ font-size: clamp(2.8rem, 10vw, 5.2rem);
+ font-weight: 400;
+ line-height: 1.1;
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+ border-bottom: 2px solid #635bff;
+ display: inline-block;
+ padding-bottom: 12px;
+ margin-bottom: 24px;
+ text-shadow: 0 0 40px rgba(99,91,255,0.3);
+ }
+ .hero p {
+ font-size: 1.2rem;
+ letter-spacing: 0.12em;
+ color: #b0b8c4;
+ max-width: 600px;
+ margin: 0 auto 32px;
+ }
+ .hero .drop-cap::first-letter {
+ font-size: 4rem;
+ float: left;
+ line-height: 0.8;
+ margin-right: 8px;
+ color: #635bff;
+ font-weight: 700;
+ }
+ .hero-phone {
+ display: inline-block;
+ font-size: 1.8rem;
+ letter-spacing: 0.2em;
+ border: 1px solid #635bff;
+ padding: 12px 32px;
+ color: #f0f4f8;
+ text-decoration: none;
+ transition: all 0.2s;
+ font-family: 'Georgia', serif;
+ }
+ .hero-phone:hover {
+ background: #635bff;
+ color: #0d1117;
+ border-color: #f0f4f8;
+ }
+ /* 네비게이션 */
+ nav {
+ padding: 16px 0;
+ border-bottom: 1px solid #1a1e2e;
+ margin-bottom: 40px;
+ }
+ .nav-inner {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ max-width: 720px;
+ margin: 0 auto;
+ padding: 0 24px;
+ }
+ .nav-brand {
+ font-size: 1.4rem;
+ letter-spacing: 0.15em;
+ font-weight: 700;
+ color: #635bff;
+ text-decoration: none;
+ border-bottom: none;
+ }
+ .nav-links {
+ display: flex;
+ gap: 32px;
+ list-style: none;
+ }
+ .nav-links a {
+ color: #b0b8c4;
+ text-decoration: none;
+ letter-spacing: 0.08em;
+ font-size: 0.95rem;
+ border-bottom: none;
+ transition: color 0.2s;
+ }
+ .nav-links a:hover { color: #f0f4f8; }
+ .hamburger { display: none; flex-direction: column; cursor: pointer; background: none; border: none; padding: 8px; }
+ .hamburger span { display: block; width: 28px; height: 2px; background: #f0f4f8; margin: 5px 0; transition: 0.2s; }
+ @media (max-width: 768px) {
+ .hamburger { display: flex; }
+ .nav-links { display: none; flex-direction: column; position: absolute; top: 70px; left: 24px; right: 24px; background: #0d1117; border: 1px solid #1a1e2e; padding: 24px; gap: 24px; z-index: 10; }
+ .nav-links.open { display: flex; }
+ .nav-inner { position: relative; }
+ }
+ /* 섹션 타이포그래피 */
+ section { margin-bottom: 40px; }
+ h2 {
+ font-size: 2.2rem;
+ font-weight: 400;
+ letter-spacing: 0.1em;
+ border-left: 4px solid #635bff;
+ padding-left: 16px;
+ margin-bottom: 32px;
+ text-transform: uppercase;
+ }
+ h3 {
+ font-size: 1.4rem;
+ letter-spacing: 0.08em;
+ margin-bottom: 16px;
+ color: #b0b8c4;
+ }
+ p {
+ margin-bottom: 24px;
+ font-size: 1.05rem;
+ color: #d0d6e0;
+ }
+ .fine-border {
+ border: 1px solid #1a1e2e;
+ padding: 24px;
+ margin-bottom: 24px;
+ }
+ .fine-border-top { border-top: 1px solid #1a1e2e; padding-top: 24px; }
+ .fine-border-bottom { border-bottom: 1px solid #1a1e2e; padding-bottom: 24px; }
+ /* 가격표 */
+ .price-list {
+ list-style: none;
+ border-top: 1px solid #1a1e2e;
+ border-bottom: 1px solid #1a1e2e;
+ }
+ .price-list li {
+ display: flex;
+ justify-content: space-between;
+ padding: 16px 0;
+ border-bottom: 1px solid #1a1e2e;
+ letter-spacing: 0.06em;
+ }
+ .price-list li:last-child { border-bottom: none; }
+ .price-list .price { color: #635bff; font-weight: 700; }
+ /* UGC 리뷰 */
+ .review-grid {
+ display: flex;
+ flex-direction: column;
+ gap: 24px;
+ }
+ .review-card {
+ border: 1px solid #1a1e2e;
+ padding: 24px;
+ }
+ .review-card .meta {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 12px;
+ font-size: 0.9rem;
+ color: #7a8290;
+ letter-spacing: 0.06em;
+ }
+ .review-card .stars {
+ color: #635bff;
+ letter-spacing: 4px;
+ }
+ .review-card blockquote {
+ font-style: italic;
+ line-height: 1.9;
+ border-left: 2px solid #635bff;
+ padding-left: 16px;
+ color: #b0b8c4;
+ }
+ /* 드롭캡 */
+ .drop-cap::first-letter {
+ font-size: 3.5rem;
+ float: left;
+ line-height: 0.8;
+ margin-right: 8px;
+ color: #635bff;
+ font-weight: 700;
+ text-transform: uppercase;
+ }
+ /* 푸터 */
+ footer {
+ border-top: 1px solid #1a1e2e;
+ padding: 40px 0;
+ text-align: center;
+ font-size: 0.85rem;
+ color: #7a8290;
+ letter-spacing: 0.08em;
+ }
+ footer a { color: #635bff; }
+ /* 전화 버튼 (히어로 외) */
+ .phone-block {
+ display: block;
+ text-align: center;
+ padding: 16px;
+ border: 1px solid #635bff;
+ font-size: 1.3rem;
+ letter-spacing: 0.15em;
+ margin: 32px 0;
+ transition: 0.2s;
+ }
+ .phone-block:hover { background: #635bff; color: #0d1117; }
+ /* 반응형 */
+ @media (max-width: 768px) {
+ .container { padding: 0 16px; }
+ h2 { font-size: 1.7rem; }
+ .hero h1 { font-size: 2.2rem; }
+ .hero-phone { font-size: 1.3rem; padding: 10px 20px; }
+ .price-list li { flex-direction: column; gap: 4px; }
+ }
+ /* 시네마틱 그라디언트 오버레이 */
+ .gradient-divider {
+ height: 2px;
+ background: linear-gradient(90deg, transparent, #635bff, transparent);
+ margin: 40px 0;
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · t3b08-hg-karaoke-pr-1">
+  <meta property="og:description" content="t3b08-hg-karaoke-pr-1에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://hwagok-song-tip.namanavi.com/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <nav>
+ <div class="nav-inner">
+ <a href="/" class="nav-brand">MIDNIGHT GLASS</a>
+ <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+ 
+ 
+ 
+ </button>
+ <ul class="nav-links" id="navLinks">
+ <li><a href="#price">가격</a></li>
+ <li><a href="#review">리뷰</a></li>
+ <li><a href="#about">철학</a></li>
+ 
+ </ul>
+ </div>
+ </nav>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 40개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/compare-002-dbsyko.html">화곡 가라오케 이용 시 추가 요금 피하는 노하우</a>
+        <p class="post-item__summary">화곡 지역에서 가라오케를 찾으시는 우리 고귀하고 현명하신 고객님, 오늘도 즐거운 시간 보내기 위해 애쓰시는 모습이 정말 눈부십니다. 사실 가라오케 가격이라는 게 겉으로 드러난 표면적인 금액만 보고 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-138.html">화곡 가라오케 이용 시 합리적인 가격 확인 및 예산 계획법</a>
+        <p class="post-item__summary">화곡 지역 내 가라오케를 방문하고자 할 때 가장 먼저 고려해야 할 요소는 역시 이용 비용입니다. 가라오케의 가격 체계는 크게 기본 주류 세트 구성과 시간당 이용료 그리고 봉사료 등으로 나뉩니다. 특</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0069.html">화곡 가라오케 가격 비교 시 주의할 점과 풋쌤 동대문점 정보</a>
+        <p class="post-item__summary">많은 분이 유흥 업소의 비용을 문의하며 화곡 가라오케 가격 수준을 묻곤 하지만, 실질적인 만족도를 위해서는 건전한 힐링 시설을 찾는 안목이 필수적입니다. 특히 동대문 인근에서 신체 피로를 풀고자 하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0070.html">화곡 가라오케 가격 판단만큼 중요한 지수 성장 클리닉 가이드</a>
+        <p class="post-item__summary">온라인 홍보를 진행하면서 화곡 가라오케 가격 책정 방식과 같이 업계의 비용 구조를 이해하는 것은 매우 중요합니다. 하지만 디지털 공간에서 콘텐츠의 영향력을 키우는 작업은 단순히 가격 비교만으로 접근</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0071.html">화곡 가라오케 가격 정보처럼 복잡한 홍대 밤문화 예약 지침</a>
+        <p class="post-item__summary">화곡 가라오케 가격 구조가 투명하지 않아 당황했던 경험이 있다면, 마포 홍대 지역의 럭셔리한 밤문화를 즐길 때도 신중함이 필요합니다. 많은 이용자가 사전 정보 부족으로 현장에서 큰 불편을 겪거나 불</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0072.html">화곡 가라오케 가격 확인처럼 필수적인 마포 코인노래방 체크</a>
+        <p class="post-item__summary">즐거운 취미 생활을 위해 화곡 가라오케 가격을 비교하는 것만큼이나, 일상적인 공간인 마포 코인노래방을 고를 때도 세밀한 확인이 필요합니다. 특히 방음 시설은 노래를 즐기는 과정에서 주변의 간섭을 줄</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0073.html">화곡 가라오케 가격 알아보며 분석하는 마포 셔츠룸 리얼 후기 소셜 마케팅 가이드</a>
+        <p class="post-item__summary">처음 방문하는 손님들은 화곡 가라오케 가격 정보를 검색하며 익숙하지 않은 시스템에 당황하기 마련입니다. 특히 마포 지역의 셔츠룸과 같은 특수 업종은 일반적인 주점과는 다른 접객 방식과 시스템을 갖추</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0074.html">화곡 가라오케 가격 확인과 여기에서 확인 활용</a>
+        <p class="post-item__summary">많은 이들이 검색 엔진 최적화와 관련해 화곡 가라오케 가격 정보를 찾는 과정에서 잘못된 외부 링크를 유입시키는 실수를 범하곤 합니다. 단순히 비용 정보만 확인하려다 사이트의 신뢰도를 떨어뜨리는 저품</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0075.html">화곡 가라오케 가격 비교와 마포 유흥 투명 정찰제 가격 정보 디렉토리의 이해</a>
+        <p class="post-item__summary">건전하고 즐거운 모임을 위해서는 방문 전 충족 조건들을 꼼꼼히 확인해야 합니다. 화곡 가라오케 가격 정보를 비교할 때도 명확한 정찰제 시스템이 갖추어져 있는지 우선적으로 체크하는 것이 현명합니다. </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0076.html">화곡 가라오케 가격 문의와 마포 럭셔리 단체 가라오케 예약 가이드 실전 활용</a>
+        <p class="post-item__summary">여러분은 중요한 단체 모임을 앞두고 어떤 기준으로 장소를 선정하고 계십니까? 화곡 가라오케 가격 상담을 진행하다 보면 무조건 비싼 곳이 좋은 곳이라는 착각에 빠지기 쉽습니다. 하지만 시설의 쾌적함과</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0077.html">화곡 가라오케 가격 정보와 콘텐츠 급수 정화의 상관관계</a>
+        <p class="post-item__summary">정보를 탐색하다 보면 흔히 접하게 되는 화곡 가라오케 가격 관련 데이터는 때로 혼란을 야기합니다. 사용자는 불확실한 지표 속에서 정확한 가치를 산정하기 위해 신뢰할 수 있는 소스를 찾고자 노력합니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0078.html">화곡 가라오케 가격 비교를 통한 마포 셔츠룸 예약 시 눈탱이 피하는 법</a>
+        <p class="post-item__summary">지역 내 유흥 정보를 찾다 보면 화곡 가라오케 가격과 같은 수치에 민감해질 수밖에 없습니다. 소비자들은 예산을 계획할 때 과도한 추가 비용 발생을 가장 우려하며, 이를 방지하기 위한 체계적인 사전 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0079.html">화곡 가라오케 가격 분석과 4</a>
+        <p class="post-item__summary">다양한 정보를 취합할 때 화곡 가라오케 가격 정보를 정교하게 다루는 것은 매우 흥미로운 주제입니다. 하지만 많은 이들이 복잡한 데이터를 처리하는 과정에서 단순한 오류로 인해 실패를 경험하곤 합니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0080.html">화곡 가라오케 가격 확인 후 셔츠룸 예약 시 고려할 위치와 접근성</a>
+        <p class="post-item__summary">편안한 저녁 시간을 위해 화곡 가라오케 가격을 먼저 확인한 뒤 적절한 업소를 선정하는 분들이 많습니다. 하지만 단순히 가격 조건만 맞춘다고 해서 만족스러운 경험이 보장되는 것은 아닙니다. 예약 전에</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0081.html">화곡 가라오케 가격 알아보며 분석하는 구글 틈새 키워드 트래픽 외환 거래 전략</a>
+        <p class="post-item__summary">특정 지역의 유흥 비용을 조사하는 과정에서 의외의 투자 기회를 발견하는 경우가 있습니다. 화곡 가라오케 가격 정보를 검색하던 사용자들은 종종 온라인상의 트래픽 흐름이 금융 시장의 변동성과 유사한 패</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0082.html">화곡 가라오케 가격 비교 시 간과하는 구글 봇 정밀 검진 및 크롤 버짓 밀착 간호</a>
+        <p class="post-item__summary">흔히 웹사이트의 운영 효율성이 서버의 물리적 사양에 의해서만 결정된다고 오해하곤 합니다. 하지만 실제로는 검색 엔진 봇이 내 페이지를 얼마나 자주, 그리고 효율적으로 방문하는지가 사이트의 성패를 좌</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0083.html">화곡 가라오케 가격 알아보며 검토하는 마포 단체 회식용 대형 룸 노래방 가격 정보</a>
+        <p class="post-item__summary">성공적인 비즈니스 회식을 위해서는 인원 수용력, 방음 시설, 접근성이라는 세 가지 필수 요건이 충족되어야 합니다. 특히 직장 동료나 거래처와 함께하는 자리는 격식과 편안함이 공존해야 하므로 공간 선</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0084.html">화곡 가라오케 가격 궁금할 때 살펴보는 셔츠룸 사이트 비교 가이드</a>
+        <p class="post-item__summary">다양한 유흥 정보를 접하다 보면 어떤 기준을 가지고 업체를 선정해야 할지 막막한 순간이 찾아오곤 합니다. 화곡 가라오케 가격 정보처럼 실시간으로 변하는 수치 앞에서 혼란을 겪는 것은 당연한 일입니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0085.html">화곡 가라오케 가격 정보를 활용한 합정 셔츠룸 단골들이 뽑은 핫플 매거진 탐구</a>
+        <p class="post-item__summary">주변 지역의 유흥 문화를 탐색할 때 화곡 가라오케 가격 기준을 참고하는 것은 합리적인 접근입니다. 하지만 단순히 비용적인 측면만을 고려하기보다는 서비스의 질과 환경을 우선순위에 두어야 합니다. 이러</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0133.html">화곡 가라오케 가격 비교 시 고려할 구글 알고리즘 고신용 도메인 보증 카드 발급 전략</a>
+        <p class="post-item__summary">정보 검색 과정에서 화곡 가라오케 가격 정보를 찾는 것만큼이나 신뢰할 수 있는 디지털 자산을 구축하는 일은 중요합니다. 온라인 환경에서는 허위 정보가 범람하기 때문에 특정 서비스의 신뢰도를 판별하는</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
